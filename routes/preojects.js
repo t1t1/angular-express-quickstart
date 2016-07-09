@@ -8,12 +8,11 @@ var data = {
 };
 
 router.get("/", function(req, res) {
-    res.json(data)
+    res.json(data);
 });
 
 router.get("/:projectId", function(req, res) {
     res.json(data.data[0]); // TODO
 });
 
-    
 module.exports = router;
