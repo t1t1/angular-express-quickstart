@@ -12,7 +12,9 @@ router.get("/", function(req, res) {
 });
 
 router.get("/:projectId", function(req, res) {
-    res.json(data.data[0]); // TODO
+    var projectId = parseInt(req.params.projectId);
+    if(projectId == 1) { res.json(data.data[0]); }
+    // else { res}
 });
 
 module.exports = router;

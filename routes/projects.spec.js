@@ -7,7 +7,11 @@ describe('Projects Test', () => {
         it('shoud return project list', function(done) {
             request.get("/projects").expect(200, {
                 data: [{id:1, name: "work2"}]
+                // data: [{id:1, name: "work"}] // test; fail
             }, done); // move done()
         });
     });
+    describe('GET /projects/:projectId', () => {
+        // TOOD
+    })
 });
