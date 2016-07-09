@@ -4,3 +4,5 @@ typings
 jsconfig.json
 db.development.sqlite
 .vscode
+
+.project
