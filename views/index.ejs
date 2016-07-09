@@ -17,7 +17,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="ShellCtrl">
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -54,6 +54,9 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="project">
                 <ul class="list-unstyled tab-list">
+                    <li ng-repeat="project in projectList">
+                        <li><i class="glyphicon glyphicon-chevron-right"></i><a href="">{{project.name}}</a></li>
+                    </li>
                     <li><i class="glyphicon glyphicon-chevron-right"></i><a href="">person</a></li>
                     <li><i class="glyphicon glyphicon-chevron-right"></i><a href="">work</a></li>
                     <li><i class="glyphicon glyphicon-chevron-right"></i><a href="">shopping</a></li>
@@ -149,5 +152,6 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="javascripts/app.module.js"></script>
+    <script src="javascripts/layout/shell.controller.js"></script>
   </body>
 </html>
